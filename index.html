@@ -3,143 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>الأكل الصحي في المدارس</title>
-
-<style>
-body {
-  font-family: Arial;
-  direction: rtl;
-  margin: 0;
-  background: linear-gradient(to right, #d4fc79, #96e6a1);
-}
-
-/* شريط التنقل */
-nav {
-  background: #2e7d32;
-  padding: 15px;
-  text-align: center;
-}
-nav a {
-  color: white;
-  margin: 15px;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* الهيدر */
-header {
-  text-align: center;
-  padding: 30px;
-  color: #2e7d32;
-}
-
-/* الأقسام */
-section {
-  margin: 20px;
-  padding: 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* الصور */
-img {
-  width: 250px;
-  border-radius: 12px;
-  margin: 10px;
-}
-
-/* الأزرار */
-button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin: 5px;
-}
-
-/* النتيجة */
-#score {
-  font-weight: bold;
-  margin-top: 10px;
-  color: #2e7d32;
-}
-</style>
 </head>
 
-<body>
+<body style="font-family:Arial; direction:rtl; background:#f0fff4; text-align:center;">
 
-<nav>
-<a href="#home">الرئيسية</a>
-<a href="#healthy">أكل صحي</a>
-<a href="#unhealthy">أكل غير صحي</a>
-<a href="#tips">نصائح</a>
-<a href="#quiz">اختبار</a>
-</nav>
+<h1 style="color:green;">🥗 الأكل الصحي في المدارس</h1>
 
-<header id="home">
-<h1>🥗 الأكل الصحي في المدارس</h1>
-<p>اختياراتك اليومية تصنع صحتك 💪</p>
-</header>
+<p>الأكل الصحي يساعدك تكون قوي ومركز في المدرسة 💪</p>
 
-<section id="healthy">
-<h2>🍎 أكلات صحية</h2>
-<img src="https://cdn.pixabay.com/photo/2017/06/02/18/24/fruit-2367029_1280.jpg">
-<p>الفواكه، الخضروات، العصائر الطبيعية، والوجبات الخفيفة الصحية.</p>
-</section>
+<h2>🍎 أمثلة أكل صحي</h2>
+<p>تفاح - موز - خضار - لبن</p>
 
-<section id="unhealthy">
-<h2>🍟 أكلات غير صحية</h2>
-<img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg">
-<p>الشيبس، المشروبات الغازية، والوجبات السريعة.</p>
-</section>
+<h2>❌ أكل غير صحي</h2>
+<p>شيبس - مشروبات غازية - وجبات سريعة</p>
 
-<section id="tips">
-<h2>💡 نصائح</h2>
-<ul>
-<li>اشرب ماء كثير 💧</li>
-<li>لا تهمل الفطور 🍞</li>
-<li>قلل السكر 🍬</li>
-<li>اختار أكل مفيد يوميًا</li>
-</ul>
-</section>
-
-<section id="quiz">
-<h2>🧠 اختبار</h2>
-
-<p>1- أيهم صحي؟</p>
-<button onclick="answer(1,true)">تفاح</button>
-<button onclick="answer(1,false)">شيبس</button>
-
-<p>2- هل المشروبات الغازية صحية؟</p>
-<button onclick="answer(2,false)">نعم</button>
-<button onclick="answer(2,true)">لا</button>
-
-<p>3- هل الفطور مهم؟</p>
-<button onclick="answer(3,true)">نعم</button>
-<button onclick="answer(3,false)">لا</button>
-
-<p id="score"></p>
-</section>
-
-<script>
-let score = 0;
-let answered = [];
-
-function answer(q, correct) {
-  if(answered.includes(q)) return;
-
-  answered.push(q);
-
-  if(correct) {
-    score++;
-  }
-
-  document.getElementById("score").innerText =
-    "درجتك: " + score + " / 3";
-}
-</script>
+<button onclick="alert('إجابة صحيحة ✅')">هل التفاح صحي؟</button>
 
 </body>
 </html>
